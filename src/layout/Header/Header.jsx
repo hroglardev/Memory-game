@@ -1,18 +1,22 @@
 import './Header.scss';
 import Logo from '../../assets/icons/Dragon Ball Z logo.svg';
 
-const Header = () => {
+const Header = ({ score, best }) => {
   return (
     <header>
-      <img
-        src={Logo}
-        alt='Dragon Ball Z'
-        className='page-logo'
-        width={'200 px'}
-      />
-      <h1 className='page-title'>
-        Memory<span>Game</span>
+      <h1>
+        <img
+          src={Logo}
+          alt='Dragon Ball Z'
+          className='page-logo'
+          width={'200 px'}
+          aria-label='page-title'
+        />
       </h1>
+      <div className='scores'>
+        <p>Best: {best}</p>
+        <p>Current: {score}</p>
+      </div>
     </header>
   );
 };

@@ -1,9 +1,9 @@
 import Cards from '../../components/Cards/Cards';
 
-const Main = () => {
+const Main = ({ handleClick }) => {
   return (
     <main>
-      <Cards />
+      <Cards handleClick={handleClick} />
     </main>
   );
 };

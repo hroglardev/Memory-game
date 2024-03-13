@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import './Cards.scss';
-const Cards = () => {
+const Cards = ({ handleClick }) => {
   const [characters, setCharacters] = useState([]);
 
   const getChars = async () => {
@@ -22,7 +22,10 @@ const Cards = () => {
     getChars();
   }, []);
 
-  console.log(characters);
+  const shuffle = () => {
+    setCharacters(characters.slice().sort(() => 0.5 - Math.random()));
+  };
+
   return (
     <section className='cards-container'>
       {characters.length > 0 &&
@@ -33,6 +36,9 @@ const Cards = () => {
             name={character.name}
             race={character.race}
             ki={character.ki}
+            handleClick={handleClick}
+            shuffle={shuffle}
+            id={character.id}
           />
         ))}
     </section>

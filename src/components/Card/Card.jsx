@@ -1,8 +1,12 @@
 import './Card.scss';
 
-const Card = ({ image, name, race, ki }) => {
+const Card = ({ id, image, name, race, ki, handleClick, shuffle }) => {
   return (
-    <article>
+    <article
+      onClick={() => {
+        handleClick(id);
+        shuffle();
+      }}>
       <div className='card-image-container'>
         <img src={image} alt={name} />
       </div>

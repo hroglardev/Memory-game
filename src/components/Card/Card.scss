@@ -19,6 +19,9 @@ article {
   }
 
   &:nth-of-type(odd) {
+    h3 {
+      color: $yellow;
+    }
       &:hover {
         border: 2px solid $yellow;
       }
@@ -26,6 +29,9 @@ article {
   }
 
   &:nth-of-type(even) {
+    h3 {
+      color: $red;
+    }
     &:hover {
       border: 2px solid $red;
     }
@@ -43,6 +49,8 @@ article {
   }
   h3 {
     align-self: self-end;
+    font-family: "DBZ";
+    letter-spacing: 0.2rem;
   }
 
   .char-info {

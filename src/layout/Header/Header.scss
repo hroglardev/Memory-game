@@ -3,16 +3,27 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
   box-shadow: $box-shadow;
   padding: $content-padding;
-  .page-title {
-    font-family: "DBZ";
-    color: $yellow;
-    letter-spacing: 0.2rem;
-    span {
+  h1 {
+    margin-left: 10px;
+  }
+  .scores {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+    p {
       font-family: "DBZ";
-      color: $red;
+      letter-spacing: 0.15rem;
+      font-size: 1.5rem; 
+      &:first-of-type {
+        color: $yellow;
+      }
+      &:nth-of-type(2) {
+        color: $red;
+      }
     }
   }
 }
