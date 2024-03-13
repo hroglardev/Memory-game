@@ -1,0 +1,9 @@
+@use "./index.scss" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $gray;
+}

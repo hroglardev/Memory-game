@@ -1,0 +1,19 @@
+@use "../../index.scss" as *;
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: $box-shadow;
+  padding: $content-padding;
+  .page-title {
+    font-family: "DBZ";
+    color: $yellow;
+    letter-spacing: 0.2rem;
+    span {
+      font-family: "DBZ";
+      color: $red;
+    }
+  }
+}
+
