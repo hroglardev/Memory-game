@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.scss';
 import Header from './layout/Header/Header';
 import Main from './layout/Main/Main';
+import Aside from './layout/Aside/Aside';
 
 function App() {
   const [clickedCards, setClickedCards] = useState([]);
@@ -23,6 +24,7 @@ function App() {
     <>
       <Header score={currentScore} best={best} />
       <Main handleClick={handleClick} />
+      <Aside size={clickedCards.length} />
     </>
   );
 }

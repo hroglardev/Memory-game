@@ -1,0 +1,56 @@
+@use "../../index.scss" as *;
+
+
+aside {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: clamp(0.5rem, -3.23778rem + 30.738vw, 10rem);
+  @media (max-width: 770px) {
+    display: none;
+  }
+  .spirit-bomb {
+    border-radius: 50%;
+  }
+  
+  
+  
+  .outer {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 9rem;
+    // left: 2rem;
+    transition: all 0.3s ease-in-out;
+    .middle {
+       width: 12px;
+         height: 12px;
+        filter: blur(1rem);
+        background-color: #00bfff;
+        display: grid;
+        place-items: center;
+        position: fixed;
+        transition: all 0.3s ease-in-out;
+      .inner {
+         width: 6px;
+         height: 6px;
+        filter: blur(0.2rem);
+        background-color: white;
+        position: fixed;
+        transition: all 0.3s ease-in-out;
+      }
+    } 
+  }
+
+  img {
+    margin-top: 25px;
+    position: fixed;
+    top: 26rem;
+    // left: 6rem;
+  }
+}
