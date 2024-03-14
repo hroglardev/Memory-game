@@ -20,6 +20,7 @@ function App() {
       setCurrentScore(currentScore + 1);
       if (clickedCards.length === 11) {
         setIsGameOver(true);
+        setBest(12);
       }
     } else {
       clickedCards.length > best && setBest(clickedCards.length);
