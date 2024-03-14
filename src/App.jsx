@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import './App.scss';
 import Header from './layout/Header/Header';
 import Main from './layout/Main/Main';
-import Aside from './layout/Aside/Aside';
+const Aside = lazy(() => import('./layout/Aside/Aside'));
 import Footer from './layout/Footer/Footer';
 import ResetModal from './components/ResetModal/ResetModal';
 import WelcomeModal from './components/WelcomeModal/WelcomeModal';
@@ -41,7 +41,11 @@ function App() {
           setIsGameOver={setIsGameOver}
         />
       )}
-      <Aside size={clickedCards.length} />
+      {isStarted && (
+        <Suspense fallback={null}>
+          <Aside size={clickedCards.length} />
+        </Suspense>
+      )}
       <Footer />
     </>
   );

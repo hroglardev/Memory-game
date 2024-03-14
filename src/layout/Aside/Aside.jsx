@@ -1,5 +1,5 @@
 import './Aside.scss';
-import Goku from '../../assets/goku.png';
+import Goku from '../../assets/goku.webp';
 
 const Aside = ({ size }) => {
   const stylesOuter = {

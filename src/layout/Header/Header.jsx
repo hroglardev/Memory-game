@@ -22,6 +22,7 @@ const Header = ({ score, best }) => {
           alt='Dragon Ball Z'
           className='page-logo'
           width={isSmallScreen ? '50px' : '200px'}
+          height={isSmallScreen ? '50px' : '55px'}
           aria-label='page-title'
         />
       </h1>
