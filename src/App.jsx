@@ -3,6 +3,7 @@ import './App.scss';
 import Header from './layout/Header/Header';
 import Main from './layout/Main/Main';
 import Aside from './layout/Aside/Aside';
+import Footer from './layout/Footer/Footer';
 import ResetModal from './components/ResetModal/ResetModal';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         />
       )}
       <Aside size={clickedCards.length} />
+      <Footer />
     </>
   );
 }
