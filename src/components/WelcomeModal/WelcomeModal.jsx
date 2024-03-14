@@ -6,7 +6,7 @@ const WelcomeModal = ({ setIsStarted }) => {
       <p>Help goku get enough energy for his spirit bomb</p>
       <p>
         Click on each character only once. If you click a previously clicked
-        card, Goku will lose the gathered energy.
+        card, Goku will lose his energy.
       </p>
       <button type='button' onClick={() => setIsStarted(true)}>
         Start
