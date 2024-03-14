@@ -15,7 +15,7 @@ function App() {
     if (!clickedCards.includes(id)) {
       setClickedCards((prevData) => [...prevData, id]);
       setCurrentScore(currentScore + 1);
-      if (clickedCards.length === 1) {
+      if (clickedCards.length === 11) {
         setIsGameOver(true);
       }
     } else {
