@@ -7,11 +7,18 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  @media(max-width: 520px) {
+    flex-direction: column;
+  }
   p {
     font-family: "DBZ";
     color: $yellow;
-    span {
-      font-family: "DBZ";
+    .dev-name {
+    font-family: "DBZ";
+    color: $yellow;
+    }
+    .app-name {
+    font-family: "DBZ";
     color: $red;
     }
   }

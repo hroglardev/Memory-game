@@ -8,7 +8,8 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        &copy; {year} {developerName} | <span>{appName}</span>
+        &copy; {year} <span className='dev-name'>{developerName}</span> |{' '}
+        <span className='app-name'>{appName}</span>
       </p>
       <div>
         <a href='https://github.com/hroglardev/' target='_blank'>
