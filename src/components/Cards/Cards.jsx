@@ -1,8 +1,7 @@
-import { Suspense, useEffect, useState, lazy } from 'react';
+import { useEffect, useState, lazy } from 'react';
 const Card = lazy(() => import('../Card/Card'));
 import FailFetch from '../FailFetch/FailFetch';
 import Loading from '../Loading/Loading';
-
 import './Cards.scss';
 const Cards = ({ handleClick }) => {
   const [characters, setCharacters] = useState([]);
@@ -46,31 +45,33 @@ const Cards = ({ handleClick }) => {
   };
 
   return (
-    <Suspense fallback={<Loading />}>
-      <section className='cards-container'>
-        {characters.length > 0 &&
-          !isLoading &&
-          characters.map((character) => (
-            <Card
-              key={character.id}
-              image={character.image}
-              name={character.name}
-              race={character.race}
-              ki={character.ki}
-              handleClick={handleClick}
-              shuffle={shuffle}
-              id={character.id}
-            />
-          ))}
-        {error !== null && (
-          <FailFetch
-            message={error.message}
-            image={error.image}
-            status={error.status}
+    <section className='cards-container'>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        characters.length > 0 &&
+        !isLoading &&
+        characters.map((character) => (
+          <Card
+            key={character.id}
+            image={character.image}
+            name={character.name}
+            race={character.race}
+            ki={character.ki}
+            handleClick={handleClick}
+            shuffle={shuffle}
+            id={character.id}
           />
-        )}
-      </section>
-    </Suspense>
+        ))
+      )}
+      {error !== null && (
+        <FailFetch
+          message={error.message}
+          image={error.image}
+          status={error.status}
+        />
+      )}
+    </section>
   );
 };
 export default Cards;
