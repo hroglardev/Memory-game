@@ -1,15 +1,27 @@
 import './Header.scss';
 import Logo from '../../assets/icons/Dragon Ball Z logo.svg';
+import SmallLogo from '../../assets/icons/Dragon Ball.svg';
+import { useState, useEffect } from 'react';
 
 const Header = ({ score, best }) => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.matchMedia('(max-width: 522px)').matches);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+  }, []);
+
   return (
     <header>
       <h1>
         <img
-          src={Logo}
+          src={isSmallScreen ? SmallLogo : Logo}
           alt='Dragon Ball Z'
           className='page-logo'
-          width={'200 px'}
+          width={isSmallScreen ? '50px' : '200px'}
           aria-label='page-title'
         />
       </h1>

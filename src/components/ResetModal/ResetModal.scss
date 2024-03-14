@@ -1,0 +1,45 @@
+@use "../../index.scss" as *;
+
+.modal {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  background-color: $gray-light;
+  display: grid;
+  padding: 25px;
+  border-radius: 8px;
+  width: 300px;
+  border: 2px solid $yellow;
+  gap: 16px;
+  opacity: 0;
+  animation: fade-in 0.8s ease-in-out forwards;
+  p {
+    text-align: center;
+    font-family: "DBZ";
+    color: $yellow;
+    font-size: 2rem;
+  }
+
+  button {
+    width: fit-content;
+    justify-self: center;
+    background-color: $gray-medium;
+    padding: 6px 16px;
+    border-radius: 8px;
+    border: 1px solid $yellow;
+    cursor: pointer;
+    font-family: "DBZ";
+    color: $red;
+    font-size: 1.8rem;
+  }
+}
+
+@keyframes fade-in {
+  from{
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  } to {
+    opacity: 1;
+    transform: translate(-50%, 0%);
+  }
+}

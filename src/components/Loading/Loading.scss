@@ -1,0 +1,18 @@
+@use "../../index.scss" as *;
+
+.loader {
+display: grid;
+justify-items: center;
+align-items: center;
+gap: 25px;
+}
+
+.loading-text {
+  font-family: "DBZ";
+  font-size: 2rem;
+  color: $yellow;
+  span {
+    font-family: "DBZ";
+    color: $red;
+  }
+}

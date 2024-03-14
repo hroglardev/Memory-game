@@ -8,7 +8,7 @@ const Card = ({ id, image, name, race, ki, handleClick, shuffle }) => {
         shuffle();
       }}>
       <div className='card-image-container'>
-        <img src={image} alt={name} />
+        <img src={image} alt={name} loading='lazy' />
       </div>
       <h3>{name}</h3>
       <div className='char-info'>

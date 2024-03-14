@@ -1,0 +1,25 @@
+@use "../../index.scss" as *;
+
+.error-container{
+  display: grid;
+  justify-items: center;
+  .error-message {
+    font-family: "DBZ";
+    font-size: 1.8rem;
+    color: $red;
+    text-align: center;
+    span {
+      font-family: "DBZ";
+      font-size: 1.8rem;
+      color: $yellow;
+    }
+  }
+
+  .image-container {
+    width: 400px;
+    img {
+      width: 100%;
+      color: $yellow;
+    }
+  }
+}
