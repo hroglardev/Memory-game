@@ -1,10 +1,10 @@
 import { useState, lazy, Suspense } from 'react';
 import './App.scss';
 import Header from './layout/Header/Header';
-import Main from './layout/Main/Main';
+const Main = lazy(() => import('./layout/Main/Main'));
 const Aside = lazy(() => import('./layout/Aside/Aside'));
 import Footer from './layout/Footer/Footer';
-import ResetModal from './components/ResetModal/ResetModal';
+const ResetModal = lazy(() => import('./components/ResetModal/ResetModal'));
 import WelcomeModal from './components/WelcomeModal/WelcomeModal';
 
 function App() {
@@ -33,13 +33,19 @@ function App() {
     <>
       <Header score={currentScore} best={best} />
       {!isStarted && <WelcomeModal setIsStarted={setIsStarted} />}
-      {!isGameOver && isStarted && <Main handleClick={handleClick} />}
+      {!isGameOver && isStarted && (
+        <Suspense fallback={null}>
+          <Main handleClick={handleClick} />
+        </Suspense>
+      )}
       {isGameOver && (
-        <ResetModal
-          setClickedCards={setClickedCards}
-          setCurrentScore={setCurrentScore}
-          setIsGameOver={setIsGameOver}
-        />
+        <Suspense fallback={null}>
+          <ResetModal
+            setClickedCards={setClickedCards}
+            setCurrentScore={setCurrentScore}
+            setIsGameOver={setIsGameOver}
+          />
+        </Suspense>
       )}
       {isStarted && (
         <Suspense fallback={null}>
