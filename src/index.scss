@@ -1,8 +1,4 @@
-@font-face {
-  font-family: "DBZ";
-  src: url("./assets/Saiyan-Sans.woff2");
-}
-
+@import url('https://fonts.cdnfonts.com/css/saiyan-sans');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -29,12 +25,8 @@ $font-sizes: (
   h1: 2.3rem,
   h2: 1.8rem,
   h3: 1.8rem,
-  legend: 1.5rem,
-  label: 1.3rem,
   p: 1.4rem,
   a: 1.2rem,
-  input: 1.2rem,
-  textarea: 1.2rem,
   button: 1.2rem,
 );
 

@@ -14,12 +14,12 @@
   opacity: 0;
   animation: fade-in 0.8s ease-in-out forwards;
   p:nth-of-type(1) {
-    font-family: "DBZ";
+    font-family: "Saiyan Sans";
     color: $yellow;
     font-size: 2rem;
   }
     p:nth-of-type(2) {
-    font-family: "DBZ";
+    font-family: "Saiyan Sans";
     color: $red;
     font-size: 2rem;
   }
@@ -32,7 +32,7 @@
     border-radius: 8px;
     border: 1px solid $yellow;
     cursor: pointer;
-    font-family: "DBZ";
+    font-family: "Saiyan Sans";
     color: $red;
     font-size: 1.8rem;
   }
