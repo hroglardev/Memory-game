@@ -8,11 +8,11 @@ gap: 25px;
 }
 
 .loading-text {
-  font-family: "Saiyan Sans";
+  font-family: "Saiyan Sans", "Roboto", "Open Sans", "Montserrat", sans-serif;
   font-size: 2rem;
   color: $yellow;
   span {
-    font-family: "Saiyan Sans";
+    font-family: "Saiyan Sans", "Roboto", "Open Sans", "Montserrat", sans-serif;
     color: $red;
   }
 }
