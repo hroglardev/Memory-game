@@ -9,6 +9,9 @@ header {
   box-shadow: $box-shadow;
   padding: $content-padding;
   height: fit-content;
+  position: sticky;
+  top: 0;
+  background-color: $gray;
   h1 {
     margin-left: 10px;
 
