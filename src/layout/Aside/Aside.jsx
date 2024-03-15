@@ -24,7 +24,13 @@ const Aside = ({ size }) => {
           <div className='spirit-bomb inner' style={stylesInner}></div>
         </div>
       </div>
-      <img src={Goku} alt='goku' width={'150px'} />
+      <img
+        src={Goku}
+        alt='goku'
+        width={'150px'}
+        height={'200px'}
+        loading='lazy'
+      />
     </aside>
   );
 };

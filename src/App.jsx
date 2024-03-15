@@ -2,7 +2,7 @@ import { useState, lazy, Suspense } from 'react';
 import './App.scss';
 import Header from './layout/Header/Header';
 const Main = lazy(() => import('./layout/Main/Main'));
-const Aside = lazy(() => import('./layout/Aside/Aside'));
+import Aside from './layout/Aside/Aside';
 import Footer from './layout/Footer/Footer';
 const ResetModal = lazy(() => import('./components/ResetModal/ResetModal'));
 import WelcomeModal from './components/WelcomeModal/WelcomeModal';
@@ -47,11 +47,7 @@ function App() {
           />
         </Suspense>
       )}
-      {isStarted && (
-        <Suspense fallback={null}>
-          <Aside size={clickedCards.length} />
-        </Suspense>
-      )}
+      <Aside size={clickedCards.length} />
       <Footer />
     </>
   );
