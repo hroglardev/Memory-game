@@ -1,7 +1,7 @@
 import { useState, lazy, Suspense } from 'react';
 import './App.scss';
 import Header from './layout/Header/Header';
-const Main = lazy(() => import('./layout/Main/Main'));
+import Main from './layout/Main/Main';
 import Aside from './layout/Aside/Aside';
 import Footer from './layout/Footer/Footer';
 const ResetModal = lazy(() => import('./components/ResetModal/ResetModal'));
@@ -33,11 +33,7 @@ function App() {
     <>
       <Header score={currentScore} best={best} />
       {!isStarted && <WelcomeModal setIsStarted={setIsStarted} />}
-      {!isGameOver && isStarted && (
-        <Suspense fallback={null}>
-          <Main handleClick={handleClick} />
-        </Suspense>
-      )}
+      {!isGameOver && isStarted && <Main handleClick={handleClick} />}
       {isGameOver && (
         <Suspense fallback={null}>
           <ResetModal

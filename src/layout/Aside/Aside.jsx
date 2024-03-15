@@ -1,5 +1,4 @@
 import './Aside.scss';
-import Goku from '../../assets/goku.webp';
 
 const Aside = ({ size }) => {
   const stylesOuter = {
@@ -25,7 +24,7 @@ const Aside = ({ size }) => {
         </div>
       </div>
       <img
-        src={Goku}
+        src='https://res.cloudinary.com/djwg0bdyh/image/upload/v1710517241/goku_sq5n9l.webp'
         alt='goku'
         width={'244px'}
         height={'267px'}
