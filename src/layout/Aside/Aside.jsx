@@ -27,8 +27,8 @@ const Aside = ({ size }) => {
       <img
         src={Goku}
         alt='goku'
-        width={'150px'}
-        height={'200px'}
+        width={'244px'}
+        height={'267px'}
         loading='lazy'
       />
     </aside>
