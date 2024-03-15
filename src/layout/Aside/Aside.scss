@@ -24,7 +24,7 @@ aside {
     display: grid;
     place-items: center;
     position: fixed;
-    top: 9rem;
+    top: 8rem;
     
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
     animation: float 0.9s ease-in-out infinite;
@@ -51,7 +51,8 @@ aside {
   img {
     margin-top: 25px;
     position: fixed;
-    top: 26rem;
+    top: 48vh;
+    transform: scale(0.8);
   }
 }
 
